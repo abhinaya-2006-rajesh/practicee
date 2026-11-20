@@ -11,6 +11,9 @@ steps:
     goals: clean package
     publishJUnitResults: false
 
+- script: echo 250 | java -cp target/classes Main
+  displayName: 'Run Electricity Bill Program'
+
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: target
