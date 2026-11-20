@@ -1,3 +1,32 @@
+Step 1: Stop Jenkins
+sudo systemctl stop jenkins
+
+
+Step 2: Open the configuration file
+sudo nano /var/lib/jenkins/config.xml
+
+
+Step 3: Find this line
+<useSecurity>true</useSecurity>
+
+
+Change it to:
+<useSecurity>false</useSecurity>
+
+
+Step 4: Save the file
+- Press Ctrl + O and press Enter.
+- Press Ctrl + X to exit.
+Step 5: Restart Jenkins
+sudo systemctl start jenkins
+
+
+Step 6: Open Jenkins
+
+Go to:
+http://localhost:8080
+
+
 AZURE PIPELINES
 
 1.Azure devops-organisation
